@@ -20,5 +20,6 @@
 *.rar
 
 #exclude token
-./config/bot.js
+node_modules/
+/bot.js
 
