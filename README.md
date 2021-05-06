@@ -1,2 +1,5 @@
 # RPi-Watcher
 
+```
+git clone
+```
