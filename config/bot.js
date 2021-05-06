@@ -1,3 +1,4 @@
+//.git/info/exclude.
 module.exports = {
     discord: {
         token: 'ODA4MDA3OTc5MjU2Nzc0NzM3.YCASEg.UH-VNZD_xqiLGVldW-gHOaRv78w',
