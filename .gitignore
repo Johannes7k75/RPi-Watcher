@@ -19,3 +19,6 @@
 *.tar.gz
 *.rar
 
+#exclude token
+bot.js
+
