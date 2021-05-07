@@ -106,52 +106,52 @@ client.on('message', message => {
     // };
 
     // For Ubuntu and other OS's
-    if (command === 'temp') {
-        si.cpuTemperature().then(data => {
-            if (data.main > 45) {
-                const temphEmbed = new Discord.MessageEmbed()
-                    .setColor('#f54242')
-                    .setTitle('Temperature')
-                    .setDescription("It's " + Math.round(data.main) + " celsius");
-                message.channel.send(temphEmbed);
-            } else {
-                const tempcEmbed = new Discord.MessageEmbed()
-                    .setColor('#4281f5')
-                    .setTitle('Temperature')
-                    .setDescription("It's " + Math.round(data.main) + " celsius");
-                message.channel.send(tempcEmbed);
-            }
-        });
-    }
+    // if (command === 'temp') {
+    //     si.cpuTemperature().then(data => {
+    //         if (data.main > 45) {
+    //             const temphEmbed = new Discord.MessageEmbed()
+    //                 .setColor('#f54242')
+    //                 .setTitle('Temperature')
+    //                 .setDescription("It's " + Math.round(data.main) + " celsius");
+    //             message.channel.send(temphEmbed);
+    //         } else {
+    //             const tempcEmbed = new Discord.MessageEmbed()
+    //                 .setColor('#4281f5')
+    //                 .setTitle('Temperature')
+    //                 .setDescription("It's " + Math.round(data.main) + " celsius");
+    //             message.channel.send(tempcEmbed);
+    //         }
+    //     });
+    // }
 
-    if (command === 'usage') {
+    // if (command === 'usage') {
 
-        si.currentLoad().then(data => {
-            console.log(Math.round(data.currentload) + '%');
-            const avgloadR = Math.round(data.avgload * 100)
-            console.log('Im Durchsnitt ' + avgloadR + '%');
+    //     si.currentLoad().then(data => {
+    //         console.log(Math.round(data.currentload) + '%');
+    //         const avgloadR = Math.round(data.avgload * 100)
+    //         console.log('Im Durchsnitt ' + avgloadR + '%');
 
-            if (data.currentload < 30) {
-                const usageh = new Discord.MessageEmbed()
-                    .setColor('#00ff00')
-                    .setTitle('CPU Usage')
-                    .addFields(
-                        { name: 'Auslastung ', value: Math.round(data.currentload) + '%' },
-                        { name: 'Durschnitts Auslastung ', value: Math.round(data.avgload * 100) + '%' }
-                    )
-                message.channel.send(usageh);
-            } else {
-                const usagel = new Discord.MessageEmbed()
-                    .setColor('#ad1ca9')
-                    .setTitle('CPU Usage')
-                    .addFields(
-                        { name: 'Auslastung ', value: Math.round(data.currentload) + '%' },
-                        { name: 'Durschnitts Auslastung ', value: Math.round(data.avgload * 100) + '%' }
-                    )
-                message.channel.send(usagel);
-            }
-        })
-    }
+    //         if (data.currentload < 30) {
+    //             const usageh = new Discord.MessageEmbed()
+    //                 .setColor('#00ff00')
+    //                 .setTitle('CPU Usage')
+    //                 .addFields(
+    //                     { name: 'Auslastung ', value: Math.round(data.currentload) + '%' },
+    //                     { name: 'Durschnitts Auslastung ', value: Math.round(data.avgload * 100) + '%' }
+    //                 )
+    //             message.channel.send(usageh);
+    //         } else {
+    //             const usagel = new Discord.MessageEmbed()
+    //                 .setColor('#ad1ca9')
+    //                 .setTitle('CPU Usage')
+    //                 .addFields(
+    //                     { name: 'Auslastung ', value: Math.round(data.currentload) + '%' },
+    //                     { name: 'Durschnitts Auslastung ', value: Math.round(data.avgload * 100) + '%' }
+    //                 )
+    //             message.channel.send(usagel);
+    //         }
+    //     })
+    // }
 
 }
 

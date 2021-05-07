@@ -130,35 +130,47 @@ function services(srv, callback) {
         if (_linux || _freebsd || _openbsd || _netbsd || _darwin) {
           if ((_linux || _freebsd || _openbsd || _netbsd) && srvString === '*') {
             try {
-              srvString = '';
-              const tmpsrv = execSync('service --status-all 2> /dev/null').toString().split('\n');
+              const tmpsrv = execSync('systemctl --type=service --no-legend 2> /dev/null').toString().split('\n');
+              srvs = [];
               for (const s of tmpsrv) {
-                const parts = s.split(']');
-                if (parts.length === 2) {
-                  srvString += (srvString !== '' ? '|' : '') + parts[1].trim();
-                  // allSrv.push({ name: parts[1].trim(), running: parts[0].indexOf('+') > 0 });
+                const name = s.split('.service')[0];
+                if (name) {
+                  srvs.push(name);
                 }
               }
-              srvs = srvString.split('|');
-            } catch (e) {
+              srvString = srvs.join('|');
+            } catch (d) {
               try {
-                const srvStr = execSync('ls /etc/init.d/ -m 2> /dev/null').toString().split('\n').join('');
                 srvString = '';
-                if (srvStr) {
-                  const tmpsrv = srvStr.split(',');
-                  for (const s of tmpsrv) {
-                    const name = s.trim();
-                    if (name) {
-                      srvString += (srvString !== '' ? '|' : '') + name;
-                      // allSrv.push({ name: name, running: null });
-                    }
+                const tmpsrv = execSync('service --status-all 2> /dev/null').toString().split('\n');
+                for (const s of tmpsrv) {
+                  const parts = s.split(']');
+                  if (parts.length === 2) {
+                    srvString += (srvString !== '' ? '|' : '') + parts[1].trim();
+                    // allSrv.push({ name: parts[1].trim(), running: parts[0].indexOf('+') > 0 });
                   }
-                  srvs = srvString.split('|');
                 }
-              } catch (f) {
-                // allSrv = [];
-                srvString = '';
-                srvs = [];
+                srvs = srvString.split('|');
+              } catch (e) {
+                try {
+                  const srvStr = execSync('ls /etc/init.d/ -m 2> /dev/null').toString().split('\n').join('');
+                  srvString = '';
+                  if (srvStr) {
+                    const tmpsrv = srvStr.split(',');
+                    for (const s of tmpsrv) {
+                      const name = s.trim();
+                      if (name) {
+                        srvString += (srvString !== '' ? '|' : '') + name;
+                        // allSrv.push({ name: name, running: null });
+                      }
+                    }
+                    srvs = srvString.split('|');
+                  }
+                } catch (f) {
+                  // allSrv = [];
+                  srvString = '';
+                  srvs = [];
+                }
               }
             }
           }
@@ -789,7 +801,7 @@ function processes(callback) {
                     let commandPath = util.getValue(lines, 'ExecutablePath', '=', true);
                     let utime = parseInt(util.getValue(lines, 'UserModeTime', '=', true), 10);
                     let stime = parseInt(util.getValue(lines, 'KernelModeTime', '=', true), 10);
-                    let mem = parseInt(util.getValue(lines, 'WorkingSetSize', '=', true), 10);
+                    let memw = parseInt(util.getValue(lines, 'WorkingSetSize', '=', true), 10);
                     allcpuu = allcpuu + utime;
                     allcpus = allcpus + stime;
                     result.all++;
@@ -812,7 +824,7 @@ function processes(callback) {
                       cpu: 0,
                       cpuu: 0,
                       cpus: 0,
-                      pmem: mem / os.totalmem() * 100,
+                      mem: memw / os.totalmem() * 100,
                       priority: parseInt(util.getValue(lines, 'Priority', '=', true), 10),
                       memVsz: parseInt(util.getValue(lines, 'PageFileUsage', '=', true), 10),
                       memRss: Math.floor(parseInt(util.getValue(lines, 'WorkingSetSize', '=', true), 10) / 1024),

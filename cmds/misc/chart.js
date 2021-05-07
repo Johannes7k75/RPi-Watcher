@@ -2,7 +2,7 @@ const Commando = require('discord.js-commando')
 const { ChartJSNodeCanvas } = require('chartjs-node-canvas')
 const { MessageAttachment } = require('discord.js')
 
-const data = require('../../config/data.chart.json')
+const data = require('../../config/temp.chart.json')
 
 console.log('barke1')
 const members = []

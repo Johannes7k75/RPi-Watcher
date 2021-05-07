@@ -19,6 +19,6 @@
     "os-utils": "^0.0.14",
     "pi-temperature": "^2.1.0",
     "quickchart-js": "^1.0.7",
-    "systeminformation": "^5.6.12"
+    "systeminformation": "^5.6.19"
   }
 }
