@@ -1,7 +1,7 @@
 # What RPi-Watcher can do
 * show you the **temperature**
 * show you ypur **cpu usage**
-* 
+* and can show you the **ip**
 
 # How to install RPi-Watcher
 ```
@@ -18,7 +18,3 @@ module.exports = {
     },
 };
 ```
-
-
-
-oder ka wie sonst  
