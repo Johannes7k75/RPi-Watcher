@@ -22,4 +22,5 @@
 #exclude token
 node_modules/
 bot.js
+tem.chart.js
 
