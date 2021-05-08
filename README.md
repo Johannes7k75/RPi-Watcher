@@ -46,6 +46,11 @@ clear <number>, clears the number of messages you say
 * can **only** clear **100 messages** at a time
 * **only messages** that are **younger than 14 days** 
 
+# Support
+* Write me a Discord Message `Johannes7k75#9801`
+* send me a email raspberry.pi.4.jonas@gmail.com
+* or make a issue
+
 # Credits
 to [ZerioDev](https://github.com/ZerioDev/Music-bot) i used his layout of the README as a base   
 to [sebhildebrandt](https://github.com/sebhildebrandt/systeminformation) for the module systemimformation [his Webiste](https://systeminformation.io)   
