@@ -22,8 +22,9 @@ module.exports = {
   - `token`, the token of the bot available on the [Discord Developers](https://discordapp.com/developers/applications) section.
   - `prefix`, the prefix that will be set to use the bot.
   - `activity`, the activity of the bot.
+  - `log channel`, the channel where the Bot log when he goes online
 
-Then type in the console `npm install` tto install all dependencies.
+Then type in the console `npm install` to install all dependencies.
 * You have two options to start the Bot
   * with Node.js `node index.js` 
   * or with pm2 `pm2 start index.js -n RPi-Watcher`
