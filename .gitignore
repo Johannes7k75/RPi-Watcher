@@ -17,4 +17,6 @@
 /node_modules
 main.js
 config/bot.js
-tem.chart.js
+config/info.get.js
+config/temp.chart.json
+temp.chart.json

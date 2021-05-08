@@ -16,6 +16,7 @@
     "discord.js": "^12.5.3",
     "discord.js-commando": "github:discordjs/Commando",
     "fs": "*",
+    "ifconfig.me": "https://github.com/alexstrat/ifconfig.me-node/tarball/master",
     "os-utils": "^0.0.14",
     "pi-temperature": "^2.1.0",
     "quickchart-js": "^1.0.7",
