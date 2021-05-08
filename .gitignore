@@ -11,6 +11,6 @@
 *.rar
 
 /src/node_modules/
-/src/config/bot.js
+/**/bot.js
 
 
