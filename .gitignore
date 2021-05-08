@@ -13,8 +13,7 @@
 *.tar.gz
 *.rar
 
-#exclude token
-node_modules/
+/cmds
+/node_modules
 bot.js
 tem.chart.js
-test.js

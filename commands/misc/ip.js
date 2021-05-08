@@ -4,12 +4,13 @@ module.exports = {
     async execute(client, message) {
         const si = require("systeminformation")
         const Discord = require("discord.js")
-        si.networkInterfaces().then(data => {
+        si.networkConnections().then(data => {
+            console.log(data)
             const usageh = new Discord.MessageEmbed()
                 .setColor('#00ff00')
                 .setTitle('CPU Usage')
                 .addFields(
-                    { name: 'IP ', value: data[0].dhcp },
+                    { name: 'IP ', value: data },
                 )
             message.channel.send(usageh);
 
