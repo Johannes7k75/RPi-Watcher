@@ -48,7 +48,7 @@ clear <number>, clears the number of messages you say
 
 # Support
 * Write me a Discord Message `Johannes7k75#9801`
-* send me a email [raspberry.pi.4.jonas@gmail.com](mailto:raspberry.pi.4.jonas@gmail.com?subject=[GitHub]%20Source%20Han%20Sans))
+* send me a email raspberry.pi.4.jonas@gmail.com
 * or make a issue
 
 # Credits
