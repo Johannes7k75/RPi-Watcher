@@ -16,5 +16,5 @@
 /cmds
 /node_modules
 main.js
-bot.js
+config/bot.js
 tem.chart.js
