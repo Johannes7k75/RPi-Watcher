@@ -35,9 +35,15 @@ The Bot is running and you can start using the commands
 usage, returns the current and the usage of the last time in %
 temp, returns the temperature of the pi in °C
 ip, returns the external ip of the pi
+clear <number>, clears the number of messages you say
 ```
 # Usage
 `RPI!<command>`
+
+# Limitations
+**clear** command 
+* can **only** clear **100 messages** at a time
+* **only messages** that are **younger than 14 days** 
 
 # Credits
 to [ZerioDev](https://github.com/ZerioDev/Music-bot) i used his layout of the README as a base   
