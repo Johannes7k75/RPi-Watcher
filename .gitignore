@@ -10,7 +10,7 @@
 *.tar.gz
 *.rar
 
-
-/src/node_modules
+/src/node_modules/
 /src/config/bot.js
+
 
