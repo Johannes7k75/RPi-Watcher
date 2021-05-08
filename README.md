@@ -41,5 +41,5 @@ ip, returns the external ip of the pi
 
 # Credits
 to [ZerioDev](https://github.com/ZerioDev/Music-bot) i used his layout of the README as a base   
-to [sebhildebrandt](https://github.com/sebhildebrandt/systeminformation) for the module systemimformation [his Webiste](https://systeminformation.io)
+to [sebhildebrandt](https://github.com/sebhildebrandt/systeminformation) for the module systemimformation [his Webiste](https://systeminformation.io)   
 and to [Worn Off Keys](https://www.youtube.com/channel/UChPrh75CmPP9Ig6jISPnfNA/videos) tutorial videos to "How to Code a Discord Bot"
