@@ -16,13 +16,15 @@ module.exports = {
         prefix: 'PREFIX',
         activity: 'ACTIVITY',
         rpilogschannel: 'LOG CHANNEL',
+        bot_owner_id: 'BOT OWNER ID',
     },
 };
 ```
-  - `token`, the token of the bot available on the [Discord Developers](https://discordapp.com/developers/applications) section.
-  - `prefix`, the prefix that will be set to use the bot.
-  - `activity`, the activity of the bot.
-  - `log channel`, the channel where the Bot log when he goes online
+  - `TOKEN`, the token of the bot available on the [Discord Developers](https://discordapp.com/developers/applications) section.
+  - `PREFIX`, the prefix that will be set to use the bot.
+  - `ACTIVITY`, the activity of the bot.
+  - `LOG CHANNEL`, the channel where the Bot log when he goes online
+  -  `BOT OWNER ID`, the ID of the Bot Owner, so your ID
 
 Then type in the console `npm install` to install all dependencies.
 * You have two options to start the Bot
@@ -35,7 +37,7 @@ The Bot is running and you can start using the commands
 ```
 usage, returns the current and the usage of the last time in %
 temp, returns the temperature of the pi in °C
-ip, returns the external ip of the pi
+ip, returns the external ip of the pi if you are the Owner
 clear <number>, clears the number of messages you say
 ```
 # Usage
