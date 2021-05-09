@@ -16,7 +16,7 @@ module.exports = {
         prefix: 'PREFIX',
         activity: 'ACTIVITY',
         rpilogschannel: 'LOG CHANNEL',
-        bot_owner_id: 'BOT OWNER ID',
+        bot_owner_id: 'BOT OWNER ID', 
     },
 };
 ```
