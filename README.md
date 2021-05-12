@@ -1,6 +1,6 @@
 # What is RPi-Watcher
 RPi-Watcher is a Discord Bot that can show you a few things about your RaspberryPi.  
-RPi-Watcher is written in javascript with a command- and event Handler.
+RPi-Watcher is written in javascript with a command- and event Handler.  
 You can use it to Monitor your RaspberryPi remotely.  
 
 # What RPi-Watcher can do
