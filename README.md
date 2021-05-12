@@ -7,6 +7,7 @@ You can use it to Monitor your RaspberryPi remotely.
 * show you the **temperature**
 * show you ypur **cpu usage**
 * **clear** messages 
+* you can get the **ping** from your Bot
 * and can show you the **ip**
 # How to install RPi-Watcher
 ```
@@ -44,6 +45,7 @@ usage, returns the current and the usage of the last time in %
 temp, returns the temperature of the pi in °C
 ip, returns the external ip of the pi if you are the Owner
 clear <number>, clears the number of messages you say
+ping, returns you the ping from your RaspberryPi
 ```
 # Usage
 `RPI!<command>`
