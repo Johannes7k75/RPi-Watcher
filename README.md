@@ -1,4 +1,9 @@
+<div align="center">
+<p>
 <img alt="CodeFactor Grade" src="https://img.shields.io/codefactor/grade/github/Johannes7k75/RPi-Watcher?label=Codefactor%20Score">
+</p>
+</div>
+
 
 # What is RPi-Watcher
 RPi-Watcher is a Discord Bot that can show you a few things about your RaspberryPi.  
