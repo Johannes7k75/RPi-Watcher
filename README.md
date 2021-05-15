@@ -2,7 +2,8 @@
 <p>
 <img alt="CodeFactor Grade" src="https://img.shields.io/codefactor/grade/github/Johannes7k75/RPi-Watcher?label=Codefactor%20Score">
 </p>
-</div>
+</div> 
+
 
 
 # What is RPi-Watcher
