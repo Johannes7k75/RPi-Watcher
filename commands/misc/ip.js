@@ -13,7 +13,7 @@ module.exports = {
                     .setColor('#00ff00')
                     .setTitle('External IP')
                     .addFields(
-                        { name: 'IP ', value: data.ip_addr },
+                        { name: 'IP ', value: "||" + data.ip_addr + "||" },
                     )
                 message.channel.send(embdeIP);
             })
