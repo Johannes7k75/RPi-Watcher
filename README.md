@@ -30,13 +30,13 @@ add a file in the **config** folder with the name **bot.js**
 
 ```javascript
 module.exports = {
-	discord: {
-		token: 'TOKEN',
-		prefix: 'PREFIX',
-		activity: 'ACTIVITY',
-		rpilogschannel: 'LOG CHANNEL',
-		bot_owner_id: 'BOT OWNER ID',
-	},
+    discord: {
+        token: 'TOKEN',
+        prefix: 'PREFIX',
+        activity: 'ACTIVITY',
+        rpilogschannel: 'LOG CHANNEL',
+        bot_owner_id: 'BOT OWNER ID', 
+    },
 };
 ```
 
