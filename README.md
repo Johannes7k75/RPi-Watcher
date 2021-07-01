@@ -37,6 +37,9 @@ module.exports = {
 		rpilogschannel: 'LOG CHANNEL',
 		bot_owner_id: 'BOT OWNER ID',
 	},
+	embed: {
+		color: 'RANDOM',
+	}
 };
 ```
 
@@ -45,6 +48,7 @@ module.exports = {
 -   `ACTIVITY`, the activity of the bot.
 -   `LOG CHANNEL`, the channel where the Bot log when he goes online
 -   `BOT OWNER ID`, the ID of the Bot Owner, so your ID
+-	`RANDOM`, the color or leave it RANDOM
 
 Then type in the console `npm install` to install all dependencies.
 
