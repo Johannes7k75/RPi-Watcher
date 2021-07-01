@@ -1,6 +1,6 @@
 {
 	"name": "raspberry-watcher",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,6 @@
 	"description": "",
 	"dependencies": {
 		"chalk": "^4.1.1",
-		"discord-together": "^1.1.14",
 		"discord.js": "^12.5.3",
 		"fs": "*",
 		"ifconfig.me": "https://github.com/alexstrat/ifconfig.me-node/tarball/master",
