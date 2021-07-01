@@ -31,27 +31,27 @@ add a file in the **config** folder with the name **bot.js**
 ```javascript
 module.exports = {
 	discord: {
-		token: 'TOKEN',
-		prefix: 'PREFIX',
-		activity: 'ACTIVITY',
-		rpilogschannel: 'LOG CHANNEL',
-		bot_owner_id: 'BOT OWNER ID',
-	},
-	embed: {
-		color: {
-			ready: '#6B8E96',
-			help: '#E67E22',
-			ip: '#00ff00',
-			temp: {
-				gt50: '#f54242', // Greater than 50°C
-				st50: '#4281f5', // Smaller than 50°C
-			},
-			usage: {
-				gt30: '#ad1ca9', // Greater than 30%
-				st30: '#00ff00', // Smaller than 30%
-			},
-		},
-	},
+        token: 'TOKEN',
+        prefix: 'PREFIX',
+        activity: 'ACTIVITY',
+        rpilogschannel: 'LOG CHANNEL',
+        bot_owner_id: 'BOT OWNER ID',
+    },
+    embed: {
+        color: {
+            ready: '#6B8E96',
+            help: '#E67E22',
+            ip: '#00ff00',
+            temp: {
+                gt50: '#f54242', // Greater than 50°C
+                st50: '#4281f5', // Smaller than 50°C
+            },
+            usage: {
+                gt30: '#ad1ca9', // Greater than 30%
+                st30: '#00ff00', // Smaller than 30%
+            },
+        },
+    },
 };
 ```
 
