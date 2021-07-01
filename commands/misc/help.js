@@ -5,7 +5,7 @@ module.exports = {
 	utilisation: '{prefix}help <command name>',
 
 	async execute(client, message, args) {
-		const Discord = require('discord.js');
+		const color = client.config.embed.color.help;
 		if (!args[0]) {
 			const misc = message.client.commands
 				.filter((x) => x.category == 'Misc')
@@ -13,7 +13,7 @@ module.exports = {
 				.join(', ');
 			message.channel.send({
 				embed: {
-					color: 'RANDOM',
+					color: color,
 					title: 'Help Menu',
 					fields: [{ name: 'Commands', value: misc }],
 				},
@@ -25,7 +25,7 @@ module.exports = {
 
 			message.channel.send({
 				embed: {
-					color: 'RANDOM',
+					color: color,
 					author: { name: 'Help Menu' },
 					fields: [
 						{ name: 'Name', value: command.name, inline: true },

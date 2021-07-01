@@ -4,23 +4,24 @@ module.exports = {
 	category: 'Misc',
 	utilisation: '{prefix}usage',
 
-	async execute(client, message) {
+	execute(client, message) {
 		const si = require('systeminformation');
 		const Discord = require('discord.js');
+		const color = client.config.embed.color.usage;
+		let embed = new Discord.MessageEmbed();
 		si.currentLoad().then((data) => {
-			if (data.currentload < 30) {
-				const usageh = new Discord.MessageEmbed()
-					.setColor('#00ff00')
+			if (Math.round(data.currentLoad) < 30) {
+				embed
+					.setColor(color.st30)
 					.setTitle('CPU Usage')
-					.addFields({ name: 'Auslastung ', value: Math.round(data.currentLoad) + '%', inline: false }, { name: 'Durschnitts Auslastung ', value: Math.round(data.avgLoad * 100) + '%', inline: false });
-				message.channel.send(usageh);
+					.addFields({ name: 'Current Usage ', value: Math.round(data.currentLoad) + '%', inline: false }, { name: 'Average Usage ', value: Math.round(data.avgLoad * 100) + '%', inline: false });
 			} else {
-				const usagel = new Discord.MessageEmbed()
-					.setColor('#ad1ca9')
+				embed
+					.setColor(color.gt30)
 					.setTitle('CPU Usage')
-					.addFields({ name: 'Auslastung ', value: Math.round(data.currentLoad) + '%', inline: false }, { name: 'Durschnitts Auslastung ', value: Math.round(data.avgLoad * 100) + '%', inline: false });
-				message.channel.send(usagel);
+					.addFields({ name: 'Current Usage ', value: Math.round(data.currentLoad) + '%', inline: false }, { name: 'Average Usage ', value: Math.round(data.avgLoad * 100) + '%', inline: false });
 			}
+			message.channel.send(embed);
 		});
 	},
 };

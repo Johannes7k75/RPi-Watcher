@@ -1,5 +1,5 @@
 const fs = require('fs');
-const chalk = require('chalk')
+const chalk = require('chalk');
 
 module.exports = (client) => {
 	fs.readdirSync('./commands').forEach((dirs) => {

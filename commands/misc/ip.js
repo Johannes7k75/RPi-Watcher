@@ -7,10 +7,11 @@ module.exports = {
 	async execute(client, message) {
 		if (message.author.id == client.config.discord.bot_owner_id) {
 			const Discord = require('discord.js');
+			const color = client.config.embed.color.ip;
 			ifconfig = require('ifconfig.me');
 			ifconfig.get(function (data) {
 				const embdeIP = new Discord.MessageEmbed()
-					.setColor('#00ff00')
+					.setColor(color)
 					.setTitle('External IP')
 					.addFields({ name: 'IP ', value: '||' + data.ip_addr + '||' });
 				message.channel.send(embdeIP);

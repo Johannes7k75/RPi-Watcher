@@ -1,14 +1,15 @@
 module.exports = async (client, message) => {
 	const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 	const date = new Date();
-	const chalk = require('chalk')
+	const chalk = require('chalk');
+	const color = client.config.embed.color.ready;
 	client.guilds.cache.forEach((guild) => {
 		console.log(chalk.greenBright(`RPi-Watcher is Online on ${guild.name}`));
 	});
 	const Discord = require('discord.js');
 	client.user.setActivity(`RPI!`, { type: 'PLAYING', url: 'Raspberry-Watcher' });
 	const embed = new Discord.MessageEmbed()
-		.setColor(client.config.embed.color)
+		.setColor(color)
 		.setTitle('The Bot is online')
 		.addFields(
 			{
