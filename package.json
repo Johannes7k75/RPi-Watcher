@@ -16,6 +16,7 @@
 		"discord.js": "^12.5.3",
 		"fs": "*",
 		"ifconfig.me": "https://github.com/alexstrat/ifconfig.me-node/tarball/master",
-		"systeminformation": "^5.6.19"
+		"systeminformation": "^5.6.19",
+		"ws": ">=7.4.6"
 	}
 }
