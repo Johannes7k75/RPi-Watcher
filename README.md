@@ -30,7 +30,7 @@ add a file in the **config** folder with the name **bot.js**
 
 ```javascript
 module.exports = {
-	discord: {
+    discord: {
         token: 'TOKEN',
         prefix: 'PREFIX',
         activity: 'ACTIVITY',
