@@ -65,7 +65,7 @@ module.exports = {
 Then type in the console `npm install` to install all dependencies.
 
 -   You have two options to start the Bot
-    -   with Node.js `node start`
+    -   with Node.js `npm start`
     -   or with pm2 `pm2 start index.js -n RPi-Watcher`
 
 The Bot is running and you can start using the commands
