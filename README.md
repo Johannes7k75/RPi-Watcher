@@ -19,6 +19,9 @@ You can use it to Monitor your RaspberryPi remotely.
 -   and can show you the **ip**
 
 # How to install RPi-Watcher
+## Requirements
+[node.js](https://nodejs.org/en/)
+and a little knowledge about Javascript
 
 ```
 git clone https://github.com/Johannes7k75/RPi-Watcher
