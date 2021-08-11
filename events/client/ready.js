@@ -6,14 +6,13 @@ module.exports = async (client, message) => {
 	client.guilds.cache.forEach((guild) => {
 		console.log(chalk.greenBright(`RPi-Watcher is Online on ${guild.name}`));
 	});
-	const Discord = require('discord.js');
 	client.user.setActivity(`RPI!`, { type: 'PLAYING', url: 'Raspberry-Watcher' });
-	const embed = new Discord.MessageEmbed()
-		.setColor(color)
-		.setTitle('The Bot is online')
-		.addFields(
+	embed = {
+		title: 'The Bot is online',
+		color: color,
+		fields: [
 			{
-				name: 'Time ',
+				name: 'Time',
 				value: `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`,
 				inline: true,
 			},
@@ -22,6 +21,7 @@ module.exports = async (client, message) => {
 				value: `${date.getDate()}.${months[date.getMonth()]}.${date.getFullYear()}`,
 				inline: true,
 			}
-		);
-	client.channels.cache.get(client.config.discord.rpilogschannel).send(embed);
+		]
+	}
+	client.channels.cache.get(client.config.discord.rpilogschannel).send({ embeds: [embed] });
 };
