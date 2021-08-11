@@ -5,6 +5,6 @@ module.exports = {
 	utilisation: '{prefix}ping',
 
 	async execute(client, message) {
-		message.channel.send('Your ping is `' + `${Date.now() - message.createdTimestamp}` + ' ms`');
+		message.channel.send(`My ping is \`${Date.now() - message.createdTimestamp}\` ms`);
 	},
 };

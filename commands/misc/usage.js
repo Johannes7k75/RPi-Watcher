@@ -6,22 +6,42 @@ module.exports = {
 
 	execute(client, message) {
 		const si = require('systeminformation');
-		const Discord = require('discord.js');
 		const color = client.config.embed.color.usage;
-		let embed = new Discord.MessageEmbed();
 		si.currentLoad().then((data) => {
 			if (Math.round(data.currentLoad) < 30) {
-				embed
-					.setColor(color.st30)
-					.setTitle('CPU Usage')
-					.addFields({ name: 'Current Usage ', value: Math.round(data.currentLoad) + '%', inline: false }, { name: 'Average Usage ', value: Math.round(data.avgLoad * 100) + '%', inline: false });
+				embed = {
+					title:'CPU Usage',
+					fields:[
+						{
+							name: 'Current Usage',
+							value: `${Math.round(data.currentLoad)}%`,
+							inline: false }, 
+						{ 
+							name: 'Average Usage',
+							value: `${Math.round(data.avgLoad * 100)}%`,
+							inline: false 
+						}
+					],
+					color:color.st30
+				}
 			} else {
-				embed
-					.setColor(color.gt30)
-					.setTitle('CPU Usage')
-					.addFields({ name: 'Current Usage ', value: Math.round(data.currentLoad) + '%', inline: false }, { name: 'Average Usage ', value: Math.round(data.avgLoad * 100) + '%', inline: false });
+				embed = {
+					title:'CPU Usage',
+					fields:[
+						{
+							name: 'Current Usage',
+							value: `${Math.round(data.currentLoad)}%`,
+							inline: false }, 
+						{ 
+							name: 'Average Usage',
+							value: `${Math.round(data.avgLoad * 100)}%`,
+							inline: false 
+						}
+					],
+					color:color.gt30
+				}
 			}
-			message.channel.send(embed);
+			message.channel.send({embeds:[embed]});
 		});
 	},
 };
