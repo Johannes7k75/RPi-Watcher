@@ -65,7 +65,7 @@ module.exports = {
 -   `BOT OWNER ID`, the ID of the Bot Owner, so your ID
 -	`RANDOM`, the color or leave it RANDOM
 
-Then type in the console `npm install` to install all dependencies.
+Then type in the console `npm install --build-from-source` to install all dependencies.
 
 -   You have two options to start the Bot
     -   with Node.js `npm start`
