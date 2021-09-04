@@ -20,6 +20,7 @@
 		"ifconfig.me": "https://github.com/alexstrat/ifconfig.me-node/tarball/master",
 		"pm2": "^5.1.0",
 		"systeminformation": "^5.6.19",
+		"uuid": "^7.0.3",
 		"ws": ">=7.4.6"
 	}
 }
