@@ -18,6 +18,6 @@ module.exports = {
             });
         } else {
             message.channel.send('You are not the Owner');
-        }
+        };
     },
 };

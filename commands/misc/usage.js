@@ -40,7 +40,7 @@ module.exports = {
 					],
 					color:color.gt30
 				};
-			}
+			};
 			message.channel.send({embeds:[embed]});
 		});
 	},

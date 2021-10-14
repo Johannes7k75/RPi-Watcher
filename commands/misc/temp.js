@@ -14,7 +14,7 @@ module.exports = {
 			} else {
 				embed = { title: 'Temperature', color: `${color.st50}`, description: `It\'s ${Math.round(data.main)} celsius` };
 				message.channel.send({ embeds: [embed] });
-			}
+			};
 		});
 	},
 };
