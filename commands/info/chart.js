@@ -136,6 +136,6 @@ module.exports = {
         // }
         const image = await canvas.renderToBuffer(configuartion)
 
-        message.channel.send({ files: [{ attachment: image, name: 'chart.gif' }] })
+        message.channel.send({ files: [{ attachment: image, name: 'chart.png' }] })
     }
 }
