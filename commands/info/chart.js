@@ -7,7 +7,7 @@ module.exports = {
     async execute(client, message, args) {
         const { CanvasRenderService } = require('chartjs-node-canvas');
 
-        const data = require('../../other/data');
+        const data = require('../../other/data.json');
         console.log(data);
         const width = 1600
         const height = 1200
@@ -106,34 +106,7 @@ module.exports = {
             width,
             height,
         );
-        // let temparr
-        // if (data.temp.length >= 60) {
-        //     temparr = data.temp.slice(Math.max(data.temp.length - 60, 0))
-        // } else {
-        //     temparr = data.temp
-        // }
 
-        // let labelsarr = []
-        // for (i = 1; i < 61; i++) {
-        //     labelsarr.push(i)
-        // }
-
-        // const configuartion = {
-        //     type: 'line',
-        //     data: {
-        //         labels: labelsarr,
-        //         datasets: [
-        //             {
-        //                 label: 'Temp Pi',
-        //                 data: temparr,
-        //                 fill: false,
-        //                 borderColor: 'rgb(71, 82, 196)',
-        //                 tension: 0.1,
-        //             }
-        //         ]
-        //     },
-        //     plugins: [plugin]
-        // }
         const image = await canvas.renderToBuffer(configuartion);
 
         message.channel.send({ files: [{ attachment: image, name: 'chart.png' }] });

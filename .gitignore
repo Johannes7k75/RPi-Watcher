@@ -5,3 +5,4 @@ node_modules/
 config/bot.js
 RPi-Watcher.code-workspace
 commands/misc/embed.js
+other/
