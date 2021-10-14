@@ -1,12 +1,11 @@
 const {Client, Intents, Collection} = require('discord.js');
 const client = new Client({	intents:[Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]});
-// 	// partials: ['MESSAGE', 'CHANNEL', 'REACTION'],
 
 client.commands = new Collection();
 client.config = require('./config/bot');
 
 client.on('ready', ()=>{
-	console.log('Ready')
+	console.log('Ready');
 });
 
 require('./other/collector');

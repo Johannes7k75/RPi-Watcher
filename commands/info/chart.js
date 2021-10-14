@@ -5,30 +5,30 @@ module.exports = {
     utilisation: '{prefix}chart',
 
     async execute(client, message, args) {
-        const { CanvasRenderService } = require('chartjs-node-canvas')
+        const { CanvasRenderService } = require('chartjs-node-canvas');
 
-        const data = require('../../other/data')
-        console.log(data)
+        const data = require('../../other/data');
+        console.log(data);
         const width = 1600
         const height = 1200
-        let configuartion
+        let configuartion;
         if (args[0] === 'temp') {
-            let temparr
+            let temparr;
             if (data.temp.length >= 60) {
-                temparr = data.temp.slice(Math.max(data.temp.length - 60, 0))
-            } else { temparr = data.temp }
+                temparr = data.temp.slice(Math.max(data.temp.length - 60, 0));
+            } else { temparr = data.temp };
 
-            let labelsarr = []
+            let labelsarr = [];
             for (i = 1; i < 61; i++) {
-                labelsarr.push(i)
+                labelsarr.push(i);
             }
             const plugin = {
                 beforeDraw: (chart) => {
-                    const { ctx } = chart
-                    ctx.fillStyle = 'rgb(29, 29, 29)'
-                    ctx.fillRect(0, 0, chart.width, chart.height)
+                    const { ctx } = chart;
+                    ctx.fillStyle = 'rgb(29, 29, 29)';
+                    ctx.fillRect(0, 0, chart.width, chart.height);
                 }
-            }
+            };
 
             configuartion = {
                 type: 'line',
@@ -46,18 +46,18 @@ module.exports = {
                 },
                 plugins: [plugin],
 
-            }
+            };
 
         } else if (args[0] === 'usage') {
-            let usagearr
+            let usagearr;
             if (data.usage.length >= 60) {
-                usagearr = data.usage.slice(Math.max(data.usage.length - 60, 0))
-            } else { usagearr = data.usage }
+                usagearr = data.usage.slice(Math.max(data.usage.length - 60, 0));
+            } else { usagearr = data.usage };
 
-            let labelsarr = []
+            let labelsarr = [];
             for (i = 1; i < 61; i++) {
-                labelsarr.push(i)
-            }
+                labelsarr.push(i);
+            };
 
             const plugin = {
                 beforeDraw: (chart) => {
@@ -65,7 +65,7 @@ module.exports = {
                     ctx.fillStyle = 'rgb(29, 29, 29)'
                     ctx.fillRect(0, 0, chart.width, chart.height)
                 }
-            }
+            };
             configuartion = {
                 type: 'line',
                 data: {
@@ -97,15 +97,15 @@ module.exports = {
                         }
                     }
                 }
-            }
-        }
+            };
+        };
 
 
 
         const canvas = new CanvasRenderService(
             width,
             height,
-        )
+        );
         // let temparr
         // if (data.temp.length >= 60) {
         //     temparr = data.temp.slice(Math.max(data.temp.length - 60, 0))
@@ -134,8 +134,8 @@ module.exports = {
         //     },
         //     plugins: [plugin]
         // }
-        const image = await canvas.renderToBuffer(configuartion)
+        const image = await canvas.renderToBuffer(configuartion);
 
-        message.channel.send({ files: [{ attachment: image, name: 'chart.png' }] })
+        message.channel.send({ files: [{ attachment: image, name: 'chart.png' }] });
     }
-}
+};

@@ -23,7 +23,7 @@ module.exports = {
 						}
 					],
 					color:color.st30
-				}
+				};
 			} else {
 				embed = {
 					title:'CPU Usage',
@@ -39,7 +39,7 @@ module.exports = {
 						}
 					],
 					color:color.gt30
-				}
+				};
 			}
 			message.channel.send({embeds:[embed]});
 		});
