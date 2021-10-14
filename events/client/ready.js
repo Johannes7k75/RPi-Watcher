@@ -22,6 +22,6 @@ module.exports = async (client, message) => {
 				inline: true,
 			}
 		]
-	}
+	};
 	client.channels.cache.get(client.config.discord.rpilogschannel).send({ embeds: [embed] });
 };
