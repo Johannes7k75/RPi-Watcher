@@ -9,14 +9,14 @@ module.exports = {
 
         const data = require('../../other/data.json');
         console.log(data);
-        const width = 1600
-        const height = 1200
+        const width = 1600;
+        const height = 1200;
         let configuartion;
         if (args[0] === 'temp') {
             let temparr;
             if (data.temp.length >= 60) {
                 temparr = data.temp.slice(Math.max(data.temp.length - 60, 0));
-            } else { temparr = data.temp };
+            } else { temparr = data.temp; };
 
             let labelsarr = [];
             for (i = 1; i < 61; i++) {
@@ -52,7 +52,7 @@ module.exports = {
             let usagearr;
             if (data.usage.length >= 60) {
                 usagearr = data.usage.slice(Math.max(data.usage.length - 60, 0));
-            } else { usagearr = data.usage };
+            } else { usagearr = data.usage; };
 
             let labelsarr = [];
             for (i = 1; i < 61; i++) {
@@ -61,9 +61,9 @@ module.exports = {
 
             const plugin = {
                 beforeDraw: (chart) => {
-                    const { ctx } = chart
-                    ctx.fillStyle = 'rgb(29, 29, 29)'
-                    ctx.fillRect(0, 0, chart.width, chart.height)
+                    const { ctx } = chart;
+                    ctx.fillStyle = 'rgb(29, 29, 29)';
+                    ctx.fillRect(0, 0, chart.width, chart.height);
                 }
             };
             configuartion = {
