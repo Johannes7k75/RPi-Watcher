@@ -8,6 +8,6 @@ module.exports = (client) => {
 			console.log(chalk.bold.cyan(`Loading discord.js event`), chalk.yellow(file));
 			const event = require(`../events/${dirs}/${file}`);
 			client.on(file.split('.')[0], event.bind(null, client));
-		}
+		};
 	});
 };

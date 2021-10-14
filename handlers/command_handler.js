@@ -9,6 +9,6 @@ module.exports = (client) => {
 			const command = require(`../commands/${dirs}/${file}`);
 			console.log(chalk.bold.blue(`Loading command`), chalk.green(file));
 			client.commands.set(command.name.toLowerCase(), command);
-		}
+		};
 	});
 };
