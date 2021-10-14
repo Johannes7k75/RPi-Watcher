@@ -65,6 +65,10 @@ module.exports = {
 -   `BOT OWNER ID`, the ID of the Bot Owner, so your ID
 -	`RANDOM`, the color or leave it RANDOM
 
+For all to work you have to install dependenices: 
+`sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev`
+
+
 Then type in the console `npm install --build-from-source` to install all dependencies.
 
 -   You have two options to start the Bot
