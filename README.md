@@ -101,7 +101,7 @@ ping, returns you the ping from your RaspberryPi
 # Support
 
 -   Write me a Discord Message `Johannes7k75#9801`
--   send me a email raspberry.pi.4.jonas@gmail.com
+-   send me a email `raspberry.pi.4.jonas@gmail.com`
 -   or make a issue
 
 # Credits
