@@ -1,3 +1,5 @@
+const { MessageEmbed } = require('discord.js');
+
 module.exports = {
     name: 'ip',
     aliases: ['i'],
@@ -9,15 +11,10 @@ module.exports = {
             const color = client.config.embed.color.ip;
             ifconfig = require('ifconfig.me');
             ifconfig.get(function (data) {
-                embed = {
-                    title: 'External IP',
-                    fields: [{ name: 'IP', value: `||${data.ip_addr}||` }],
-                    color: color,
-                };
-                message.channel.send({ embeds: [embed] });
+                message.channel.send({ embeds: [new MessageEmbed().setTitle("External IP").addField("IP", `||${data.ip_addr}||`).setColor(color)] });
             });
         } else {
-            message.channel.send('You are not the Owner');
+            message.channel.send({ content: "You are not the Owner" });
         };
     },
 };

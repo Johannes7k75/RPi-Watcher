@@ -2,7 +2,7 @@
 *.log
 
 node_modules/
-config/bot.js
+other/bot.js
 RPi-Watcher.code-workspace
 commands/misc/embed.js
 other/data.json

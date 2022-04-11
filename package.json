@@ -11,14 +11,13 @@
 	"license": "ISC",
 	"description": "",
 	"dependencies": {
-		"canvas": "^2.8.0",
 		"chalk": "^4.1.1",
-		"chart.js": "^3.5.0",
-		"chartjs-node-canvas": "^3.2.0",
+		"chart.js": "^3.7.1",
 		"discord.js": "^13.0.1",
 		"fs": "*",
 		"ifconfig.me": "https://github.com/alexstrat/ifconfig.me-node/tarball/master",
 		"pm2": "^5.1.0",
+		"quickchart-js": "^3.0.1",
 		"systeminformation": "^5.6.19",
 		"uuid": "^7.0.3",
 		"ws": ">=7.4.6"

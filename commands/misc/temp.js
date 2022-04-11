@@ -1,3 +1,5 @@
+const { MessageEmbed } = require('discord.js');
+
 module.exports = {
 	name: 'temp',
 	aliases: ['t'],
@@ -8,13 +10,7 @@ module.exports = {
 		const si = require('systeminformation');
 		const color = client.config.embed.color.temp;
 		si.cpuTemperature().then((data) => {
-			if (data.main > 45) {
-				embed = { title: 'Temperature', color: `${color.gt50}`, description: `It\'s ${Math.round(data.main)} celsius` };
-				message.channel.send({ embeds: [embed] });
-			} else {
-				embed = { title: 'Temperature', color: `${color.st50}`, description: `It\'s ${Math.round(data.main)} celsius` };
-				message.channel.send({ embeds: [embed] });
-			};
+			message.channel.send({ embeds: [new MessageEmbed().setTitle("Temperature").setDescription(`It\'s ${Math.round(data.main)} celsius`).setColor(data.main > 45 ? color.gt50 : color.st50)] });
 		});
 	},
 };
