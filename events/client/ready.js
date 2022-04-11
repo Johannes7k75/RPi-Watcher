@@ -13,12 +13,12 @@ module.exports = async (client, message) => {
 		fields: [
 			{
 				name: 'Time',
-				value: `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`,
+				value: `<t:${Math.floor(Date.now()/1000)}:T>`,
 				inline: true,
 			},
 			{
 				name: 'Date',
-				value: `${date.getDate()}.${months[date.getMonth()]}.${date.getFullYear()}`,
+				value: `<t:${Math.floor(Date.now()/1000)}:D>`,
 				inline: true,
 			}
 		]
