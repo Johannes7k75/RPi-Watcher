@@ -12,14 +12,16 @@ You can use it to Monitor your RaspberryPi remotely.
 
 # What RPi-Watcher can do
 
--   show you the **temperature**
--   show you ypur **cpu usage**
--   **clear** messages
--   you can get the **ping** from your Bot
--   and can show you the **ip**
+- show you the **temperature**
+- show you ypur **cpu usage**
+- **clear** messages
+- you can get the **ping** from your Bot
+- and can show you the **ip**
 
 # How to install RPi-Watcher
+
 ## Requirements
+
 [node.js](https://nodejs.org/en/)
 and a little knowledge about Javascript
 
@@ -29,7 +31,7 @@ git clone https://github.com/Johannes7k75/RPi-Watcher
 
 add a file in the **config** folder with the name **bot.js**
 
--   For configuration
+- For configuration
 
 ```javascript
 module.exports = {
@@ -58,22 +60,18 @@ module.exports = {
 };
 ```
 
--   `TOKEN`, the token of the bot available on the [Discord Developers](https://discordapp.com/developers/applications) section.
--   `PREFIX`, the prefix that will be set to use the bot.
--   `ACTIVITY`, the activity of the bot.
--   `LOG CHANNEL`, the channel where the Bot log when he goes online
--   `BOT OWNER ID`, the ID of the Bot Owner, so your ID
--	`RANDOM`, the color or leave it RANDOM
+- `TOKEN`, the token of the bot available on the [Discord Developers](https://discordapp.com/developers/applications) section.
+- `PREFIX`, the prefix that will be set to use the bot.
+- `ACTIVITY`, the activity of the bot.
+- `LOG CHANNEL`, the channel where the Bot log when he goes online
+- `BOT OWNER ID`, the ID of the Bot Owner, so your ID
+- `RANDOM`, the color or leave it RANDOM
 
-For all to work you have to install dependenices: 
-`sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev`
+Then type in the console `npm install` to install all dependencies.
 
-
-Then type in the console `npm install --build-from-source` to install all dependencies.
-
--   You have two options to start the Bot
-    -   with Node.js `npm start`
-    -   or with pm2 `pm2 start index.js -n RPi-Watcher`
+- You have two options to start the Bot
+  - with Node.js `npm start`
+  - or with pm2 `pm2 start index.js -n RPi-Watcher`
 
 The Bot is running and you can start using the commands
 
@@ -95,14 +93,14 @@ ping, returns you the ping from your RaspberryPi
 
 **clear** command
 
--   can **only** clear **100 messages** at a time
--   **only messages** that are **younger than 14 days**
+- can **only** clear **100 messages** at a time
+- **only messages** that are **younger than 14 days**
 
 # Support
 
--   Write me a Discord Message `Johannes7k75#9801`
--   send me a email `raspberry.pi.4.jonas@gmail.com`
--   or make a issue
+- Write me a Discord Message `Johannes7k75#9801`
+- send me a email `raspberry.pi.4.jonas@gmail.com`
+- or make a issue
 
 # Credits
 
