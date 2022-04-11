@@ -10,7 +10,6 @@ module.exports = {
     async execute(client, message, args) {
         const myChart = new QuickChart();
         const data = client.cache;
-        console.log(data);
         myChart.setWidth(1600);
         myChart.setHeight(1200);
         myChart.setBackgroundColor('rgb(29, 29, 29)');
